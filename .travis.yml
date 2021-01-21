@@ -1,15 +1,14 @@
-arch: ppc64le
+#arch: ppc64le
 os: linux
 dist: xenial
 before_script:
      - sudo apt-get update -y
-     - sudo apt-get install cmdtest
 language: node_js
 node_js:
      - 12 
 install:
      - npm install -g grunt-cli bower
-     - cmdtest install
+     - npm install
      - bower install
 script:
      - npm test
