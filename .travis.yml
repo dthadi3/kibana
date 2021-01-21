@@ -3,12 +3,12 @@ os: linux
 dist: xenial
 before_script:
      - sudo apt-get update -y
-     - sudo apt-get install -y wget tar git curl zip hostname openjdk-8-jdk make python g++ 
+     - sudo apt-get install -y yarn wget tar git curl zip hostname openjdk-8-jdk make python g++ 
      - export ES_JAVA_OPTS="-Xms40m"
 script:
      - source ~/.nvm/nvm.sh
      - npm install --save core-js@^3
      - npm install grunt babel-preset-react babel-plugin-add-module-exports babel-plugin-transform-async-generator-functions babel-plugin-transform-object-rest-spread babel-plugin-transform-class-properties babel-preset-env babel-register 
      - nvm install "$(cat .node-version)"
-     - npm install 
+     - yarn install 
      - npm run test:server
