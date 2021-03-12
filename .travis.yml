@@ -10,7 +10,4 @@ script:
      - npm install -g node-gyp
      - yarn kbn bootstrap
 language: node_js
-node_js:
-     - 14
-     - 12
 skiptest: ci
