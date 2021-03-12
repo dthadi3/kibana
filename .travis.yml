@@ -2,13 +2,17 @@
 os: linux
 dist: xenial
 before_script:
-     - sudo apt-get update -y
+     - nvm use
+     - npm install --global yarn
+     - yarn kbn bootstrap
+     - npm install -g node-gyp
+     - yarn kbn bootstrap
 language: node_js
-node_js:
-     - 12 
-install:
-     - npm install -g grunt-cli bower
-     - npm install
-     - bower install
-script:
-     - npm test
+#node_js:
+#     - 12 
+#install:
+#     - npm install -g grunt-cli bower
+#     - npm install
+#     - bower install
+#script:
+ #    - npm test
